@@ -9,7 +9,7 @@ function FieldFormAdd({ onAddField }) {
     e.preventDefault();
 
     const dateReg = /^\d{2}[.]\d{2}[.]\d{4}$/;
-    const distanceReg = /^\d{1,3}[.]?\d{1,2}$/;
+    const distanceReg = /^\d{1,3}[.]\d{1,2}$/;
 
     if (dateReg.test(titleDate) && distanceReg.test(titleDistance)) {
       let dateResult = document.querySelectorAll(".dateResult");
@@ -27,20 +27,6 @@ function FieldFormAdd({ onAddField }) {
         titleDate,
         titleDistance
       });
-
-      // let dateRes = Array.from(document.querySelectorAll(".dateResult"));
-      // // console.log(dateRes);
-      // let arrDate = dateRes.map((item) => item.innerText);
-      // console.log(arrDate);
-      // let arrDateSort = dateResult.map((item) => item.innerText);
-      // arrDate.sort(function (a, b) {
-      //   // '01/03/2014'.split('/')
-      //   // gives ["01", "03", "2014"]
-      //   a = a.split(".");
-      //   b = b.split(".");
-      //   return a[2] - b[2] || a[1] - b[1] || a[0] - b[0];
-      // });
-      // console.log(arrDate);
     }
     // setTitleDate("");
     // setTitleDistance("");

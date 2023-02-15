@@ -3,23 +3,13 @@ function FieldList({ fields }) {
   let close = require("../img/close.png");
 
   if (fields.length > 0) {
-    let arr = [];
-    fields.forEach((item) => {
-      arr.push(item);
+    fields.sort(function (a, b) {
+      a = a.titleDate.split(".");
+      b = b.titleDate.split(".");
+      return a[2] - b[2] || a[1] - b[1] || a[0] - b[0];
     });
-    // console.log(arr);
+
   }
-  // fields.forEach((item) => {
-  // console.log(fields[0].titleDate);
-  // });
-  // fields.sort(function (a, b) {
-  //   // '01/03/2014'.split('/')
-  //   // gives ["01", "03", "2014"]
-  //   a = a.split(".");
-  //   b = b.split(".");
-  //   return a[2] - b[2] || a[1] - b[1] || a[0] - b[0];
-  // });
-  // console.log(fields);
 
   const removeClick = (e) => {
     e.target.closest(".fields").remove();

@@ -8,10 +8,11 @@ function Accounting() {
   const addField = (field) => {
     setFields((prevFields) => [...prevFields, field]);
   };
-  // console.log(fields);
 
   const filteredField = () => {
+
     return fields;
+
   };
 
   return (
