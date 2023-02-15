@@ -10,9 +10,7 @@ function Accounting() {
   };
 
   const filteredField = () => {
-
     return fields;
-
   };
 
   return (
