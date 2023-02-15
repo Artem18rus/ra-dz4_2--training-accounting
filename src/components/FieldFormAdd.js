@@ -42,9 +42,8 @@ function FieldFormAdd({ onAddField }) {
       // });
       // console.log(arrDate);
     }
-    // console.log(setTitleDate());
-    setTitleDate = "";
-    setTitleDistance = "";
+    // setTitleDate("");
+    // setTitleDistance("");
   };
 
   const changeDate = (event) => {
